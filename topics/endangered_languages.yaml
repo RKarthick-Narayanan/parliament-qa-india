@@ -1,0 +1,21 @@
+version: 1
+name: endangered_languages
+houses: [LS, RS]
+dates:
+  from: "2003-01-01"
+  to: "2026-10-30"
+search:
+  terms:
+    - endangered languages
+    - dialect
+    - dialects
+    - mother tongue
+    - tribal languages
+    - tribal language
+    - tribal dialect
+    - tribal dialects
+    - regional language
+    - regional languages
+    - eighth schedule
+documents:
+  download: true

@@ -1,0 +1,7 @@
+version: 1
+name: smoke_rs
+houses: [RS]
+dates: {from: "2013-08-12", to: "2013-08-12"}
+search:
+  terms: [endangered languages]
+documents: {download: false}

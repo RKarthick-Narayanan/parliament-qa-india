@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parliament-qa"
+version = "0.1.0"
+description = "Reproducible targeted Indian Parliament question collection"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.28", "PyYAML>=6"]
+
+[project.scripts]
+parliament-qa = "parliament_qa.cli:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE.md", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

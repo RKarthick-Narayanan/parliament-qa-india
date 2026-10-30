@@ -1,0 +1,7 @@
+version: 1
+name: smoke_ls
+houses: [LS]
+dates: {from: "2000-03-07", to: "2000-03-07"}
+search:
+  terms: [eighth schedule]
+documents: {download: false}
