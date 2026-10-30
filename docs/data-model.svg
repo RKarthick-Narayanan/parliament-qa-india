@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+  <title id="title">Parliament Q&amp;A collector: data model</title>
+  <desc id="desc">The YAML configuration starts a collection run. Lok Sabha and Rajya Sabha sources provide questions, which link to matches and documents. Search jobs and requests record coverage. The records are exported as CSV files.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#52657a"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="720" rx="16" fill="#f6f8fa"/>
+  <g fill="none" stroke="#52657a" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M 395 86 V 110"/>
+    <path d="M 320 175 V 192 H 185 V 215"/>
+    <path d="M 470 175 V 192 H 510 V 215"/>
+    <path d="M 185 280 V 300 H 395 V 319"/>
+    <path d="M 510 280 V 300 H 395 V 319"/>
+    <path d="M 310 388 V 405 H 185 V 425"/>
+    <path d="M 480 388 V 405 H 510 V 425"/>
+    <path d="M 185 497 V 580 H 395 V 600"/>
+    <path d="M 510 497 V 580 H 395 V 600"/>
+    <path d="M 535 143 H 815 V 215"/>
+    <path d="M 815 280 V 425"/>
+    <path d="M 815 497 V 635 H 655"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <g fill="#e8f1ff" stroke="#a5bfea" stroke-width="1.5">
+      <rect x="245" y="16" width="300" height="70" rx="10"/>
+      <rect x="255" y="110" width="280" height="65" rx="10"/>
+    </g>
+    <g fill="#e9f7f0" stroke="#9ccfb3" stroke-width="1.5">
+      <rect x="65" y="215" width="240" height="65" rx="10"/>
+      <rect x="390" y="215" width="240" height="65" rx="10"/>
+      <rect x="245" y="319" width="300" height="69" rx="10"/>
+    </g>
+    <g fill="#fff4df" stroke="#e4c587" stroke-width="1.5">
+      <rect x="65" y="425" width="240" height="72" rx="10"/>
+      <rect x="390" y="425" width="240" height="72" rx="10"/>
+      <rect x="690" y="215" width="250" height="65" rx="10"/>
+      <rect x="690" y="425" width="250" height="72" rx="10"/>
+    </g>
+    <rect x="255" y="600" width="400" height="70" rx="10" fill="#e8f1ff" stroke="#a5bfea" stroke-width="1.5"/>
+    <g fill="#182b40" font-size="19" font-weight="bold">
+      <text x="395" y="44">YAML configuration</text>
+      <text x="395" y="137">Collection run</text>
+      <text x="185" y="242">Lok Sabha</text>
+      <text x="510" y="242">Rajya Sabha</text>
+      <text x="395" y="347">Questions</text>
+      <text x="185" y="453">Matches</text>
+      <text x="510" y="453">Documents</text>
+      <text x="815" y="242">Jobs and requests</text>
+      <text x="815" y="453">Coverage and issues</text>
+      <text x="455" y="628">CSV exports</text>
+    </g>
+    <g fill="#455b70" font-size="15">
+      <text x="395" y="67">Houses, dates and search terms</text>
+      <text x="395" y="158">Configuration and checkpoint</text>
+      <text x="185" y="264">e-Library / DSpace</text>
+      <text x="510" y="264">Official question APIs</text>
+      <text x="395" y="370">House, IDs, date and metadata</text>
+      <text x="185" y="477">Term, field and context</text>
+      <text x="510" y="477">URL, language and checksum</text>
+      <text x="815" y="264">Progress and source evidence</text>
+      <text x="815" y="477">Completed and unresolved work</text>
+      <text x="455" y="651">Questions, matches, documents and coverage</text>
+    </g>
+  </g>
+</svg>

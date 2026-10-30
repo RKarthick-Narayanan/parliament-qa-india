@@ -4,22 +4,7 @@ The checkpoint is SQLite. `questions` stores a house-prefixed source key and sou
 
 ## Data model
 
-```mermaid
-flowchart TD
-    YAML["YAML configuration<br/>Houses, dates and search terms"] --> RUN["Collection run<br/>Configuration and checkpoint"]
-    RUN --> LS["Lok Sabha<br/>e-Library / DSpace"]
-    RUN --> RS["Rajya Sabha<br/>Official question APIs"]
-    LS --> Q["Questions<br/>House, source ID, number, date and metadata"]
-    RS --> Q
-    Q --> M["Matches<br/>Term, field, context and method"]
-    Q --> D["Documents<br/>URL, language, checksum and status"]
-    RUN --> J["Search jobs and requests<br/>Progress and source evidence"]
-    J --> C["Coverage and unresolved issues"]
-    Q --> E["CSV exports"]
-    M --> E
-    D --> E
-    C --> E
-```
+![Data model: a configured collection searches Lok Sabha and Rajya Sabha sources for questions, matches and documents; search jobs record evidence and coverage, and the results are exported as CSV files.](data-model.svg)
 
 This diagram shows the collection's logical flow. In the checkpoint, each match and document record refers to one question; a question can have several matches and documents. The same source document can appear in more than one question association. Jobs, requests and issues record progress and evidence; the arrows do not imply additional database foreign keys.
 
