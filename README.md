@@ -43,7 +43,7 @@ The output folder contains `questions.csv`, `matches.csv`, `documents.csv`, `cov
 
 `source_returned` in `matches.csv` means the search service returned a candidate. `literal_verified` means the requested phrase was found in a returned field after normalization; `occurrences` counts that field's matches. A downloaded PDF is not automatically a verified question association. `documents.csv` records download and identity status separately.
 
-See [data model and sources](docs/data-model.md), [limitations](docs/limitations.md) and [verification](VERIFICATION.md). The package contains no corpus. The code licence does not grant rights to parliamentary source documents.
+See the [data model diagram and sources](docs/data-model.md#data-model), [limitations](docs/limitations.md) and [verification](VERIFICATION.md). The package contains no corpus. The code licence does not grant rights to parliamentary source documents.
 
 ## Software and data rights
 
