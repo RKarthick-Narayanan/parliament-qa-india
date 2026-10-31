@@ -28,8 +28,9 @@ complete Hindi OCR.
 
 ## Run
 
-See the [command cheat sheet](docs/commands-cheatsheet.md) for the complete
-collection, corpus, concept-retrieval, sampling, testing and export workflow.
+See the [portable command guide](docs/commands-cheatsheet-portable.md) for
+installation, collection, corpus processing, review, export and contribution
+commands.
 
 Copy and edit `topics/endangered_languages.yaml`. Dates are inclusive. To collect metadata before downloading documents, set `documents.download: false`:
 

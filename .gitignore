@@ -12,6 +12,8 @@ results/
 # analysis outputs remain local even when some files are scripts.
 /analysis/
 *.backup
+# Laptop-specific command notes stay local; publish only the portable guide.
+/docs/commands-cheatsheet.md
 # Local storage-maintenance utility contains machine-specific mount paths.
 /scripts/migrate_workspace_to_apps.sh
 /scripts/scripts/
