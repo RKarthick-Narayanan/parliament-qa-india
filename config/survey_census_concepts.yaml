@@ -1,0 +1,82 @@
+schema_version: 1
+snapshot:
+  from: 1999-01-01
+  to: 2026-10-30
+discovery_language: en
+retain_languages: [en, hi]
+exact_matching: true
+concepts:
+  linguistic_survey:
+    label: Linguistic Survey
+    queries:
+      - linguistic survey
+      - linguistic surveys
+      - language survey
+      - language surveys
+      - survey of language
+      - survey of languages
+      - surveys of language
+      - surveys of languages
+      - survey on language
+      - survey on languages
+      - surveys on language
+      - surveys on languages
+    patterns:
+      - '(?<!\w)linguistic[\s‐‑‒–—-]+surveys?(?!\w)'
+      - '(?<!\w)language[\s‐‑‒–—-]+surveys?(?!\w)'
+      - '(?<!\w)surveys?[\s‐‑‒–—-]+(?:of|on)[\s‐‑‒–—-]+languages?(?!\w)'
+  mother_tongue_survey:
+    label: Mother Tongue Survey
+    queries:
+      - mother tongue survey
+      - mother tongue surveys
+      - survey of mother tongue
+      - survey of mother tongues
+      - surveys of mother tongue
+      - surveys of mother tongues
+      - mother tongue enumeration
+      - mother tongue enumerations
+      - enumeration of mother tongue
+      - enumeration of mother tongues
+      - enumerations of mother tongue
+      - enumerations of mother tongues
+    patterns:
+      - '(?<!\w)mother[\s‐‑‒–—-]+tongues?[\s‐‑‒–—-]+(?:surveys?|enumerations?)(?!\w)'
+      - '(?<!\w)(?:surveys?|enumerations?)[\s‐‑‒–—-]+of[\s‐‑‒–—-]+mother[\s‐‑‒–—-]+tongues?(?!\w)'
+  language_census:
+    label: Language Census
+    queries:
+      - language census
+      - language censuses
+      - linguistic census
+      - linguistic censuses
+      - census of language
+      - census of languages
+      - censuses of language
+      - censuses of languages
+      - census-based language classification
+      - language classification in the census
+      - language classification from the census
+      - language classification based on the census
+    patterns:
+      - '(?<!\w)(?:language|linguistic)[\s‐‑‒–—-]+censuses?(?!\w)'
+      - '(?<!\w)censuses?[\s‐‑‒–—-]+of[\s‐‑‒–—-]+languages?(?!\w)'
+      - '(?<!\w)census[\s‐‑‒–—-]+based[\s‐‑‒–—-]+language[\s‐‑‒–—-]+classification(?!\w)'
+      - '(?<!\w)language[\s‐‑‒–—-]+classification[\s‐‑‒–—-]+(?:in|from|based[\s‐‑‒–—-]+on)[\s‐‑‒–—-]+the[\s‐‑‒–—-]+census(?!\w)'
+sources:
+  lok_sabha:
+    sessions: https://sansad.in/api_ls/business/AllLoksabhaAndSessionDates
+    questions: https://sansad.in/api_ls/question/qetFilteredQuestionsAns
+    elibrary: https://elibrary.sansad.in/server/api/discover/search/objects
+    scope: 75228d43-3a98-4b7d-b90f-ffec6aa9fa11
+  rajya_sabha:
+    sessions: https://sansad.in/api_rs/business/sessionDates
+    questions: https://rsdoc.nic.in/Question/Search_Questions
+    integration: https://integration.rajyasabha.digital/rsdebate/api/question/search-questions
+policy:
+  page_size: 1000
+  retries: 3
+  workers: 4
+  archive_raw_responses: true
+  scan_blank_answer_documents: true
+  merge_only_verified: true

@@ -5,6 +5,16 @@ __pycache__/
 build/
 dist/
 results/
+# The migrated results path is a symlink, so the directory-only rule above
+# does not match it. Never commit the corpus or its external-storage link.
+/results
+# Research reports, profiles, representative samples, and other generated
+# analysis outputs remain local even when some files are scripts.
+/analysis/
+*.backup
+# Local storage-maintenance utility contains machine-specific mount paths.
+/scripts/migrate_workspace_to_apps.sh
+/scripts/scripts/
 *.sqlite3*
 *.sqlite
 *.sqlite-*

@@ -9,6 +9,9 @@ description = "Reproducible targeted Indian Parliament question collection"
 requires-python = ">=3.11"
 dependencies = ["requests>=2.28", "PyYAML>=6"]
 
+[project.optional-dependencies]
+corpus = ["pyarrow>=14"]
+
 [project.scripts]
 parliament-qa = "parliament_qa.cli:main"
 

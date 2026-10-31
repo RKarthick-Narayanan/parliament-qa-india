@@ -1,5 +1,23 @@
 # Data model and sources
 
+## Full-text corpus model
+
+The full corpus uses `corpus.sqlite3`, independently of targeted-search
+`checkpoint.sqlite3`. `questions` provides stable House-prefixed identities;
+`documents` records official associations; and `document_versions` stores immutable,
+checksum-addressed files. `pages` holds lossless extracted or OCR text plus normalized
+page text. `sections` holds cleaned full-document, question, answer, annexure and
+correction text with version and page spans.
+
+`annexures`, `corrections` and `supplementary_links` retain related material without
+turning oral supplementary exchanges into independent questions. `source_requests`,
+`coverage`, `issues`, `reviews` and `stage_runs` preserve provenance, gaps, decisions
+and resumability. `question_fts` is derived and can be rebuilt from canonical tables.
+
+Stable IDs prefer the official source ID. Without one, the fallback is a SHA-256 digest
+of House, term, session, answer date, normalized question type and question number. A
+changed source file creates a new document version rather than replacing an old one.
+
 The checkpoint is SQLite. `questions` stores a house-prefixed source key and source payload; `matches` links terms and fields to questions; `documents` links original URLs and downloaded files to questions; `jobs` records each search partition and page; `requests` records source response provenance; and `issues` records unresolved problems. `run` stores the resolved configuration and hash. CSV exports are generated from these tables without requiring a network connection.
 
 ## Data model
